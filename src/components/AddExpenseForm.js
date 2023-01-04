@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddExpenseForm = (props) => {
   const { dispatch } = useContext(AppContext);
@@ -7,7 +8,11 @@ const AddExpenseForm = (props) => {
   const [cost, setCost] = useState('');
   const onSubmit = (event) => {
     event.preventDefault();
-    const expense = {};
+    const expense = {
+      id: uuidv4(),
+      name: name,
+      cost: parseInt(cost),
+    };
   };
   return (
     <form onSubmit={onSubmit}>

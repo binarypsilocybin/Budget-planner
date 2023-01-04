@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 const AddExpenseForm = (props) => {
   const [name, setName] = useState('');
   const [cost, setCost] = useState('');
+  const onSubmit = (event) => {
+    event.preventDefault();
+    alert('name' + name + 'cost' + cost);
+  };
   return (
     <form>
       <div className="row">

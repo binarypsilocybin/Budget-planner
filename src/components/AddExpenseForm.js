@@ -7,37 +7,37 @@ const AddExpenseForm = (props) => {
   const [cost, setCost] = useState('');
   const onSubmit = (event) => {
     event.preventDefault();
-    const expense = {
-      
-    }
+    const expense = {};
   };
   return (
     <form onSubmit={onSubmit}>
-      <div className="row">
-        <div className="col-sm">
+      <div class="row">
+        <div class="col-sm col-lg-4">
           <label for="name">Name</label>
           <input
             required="required"
             type="text"
-            className="form-control"
+            class="form-control"
             id="name"
             value={name}
             onChange={(event) => setName(event.target.value)}
-          ></input>
+          />
         </div>
-        <div className="col-sm">
+        <div class="col-sm col-lg-4">
           <label for="cost">Cost</label>
           <input
             required="required"
-            type="text"
-            className="form-control"
+            type="number"
+            class="form-control"
             id="cost"
             value={cost}
             onChange={(event) => setCost(event.target.value)}
-          ></input>
+          />
         </div>
-        <div className="col-sm">
-          <button type="submit" className="btn btn-primary">
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm">
+          <button type="submit" class="btn btn-primary">
             Save
           </button>
         </div>

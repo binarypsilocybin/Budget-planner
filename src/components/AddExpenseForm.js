@@ -24,6 +24,8 @@ const AddExpenseForm = (props) => {
             type="text"
             className="form-control"
             id="cost"
+            value={cost}
+            onChange={(event) => setCost(event.target.value)}
           ></input>
         </div>
         <div className="col-sm">

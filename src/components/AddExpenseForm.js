@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
 const AddExpenseForm = (props) => {
+  const { dispatch } = useContext(AppContext);
   const [name, setName] = useState('');
   const [cost, setCost] = useState('');
   const onSubmit = (event) => {
     event.preventDefault();
-    alert('name' + name + 'cost' + cost);
+    const expense = {
+      
+    }
   };
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="row">
         <div className="col-sm">
           <label for="name">Name</label>
